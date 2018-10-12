@@ -1,5 +1,10 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
-import { Metrics, ApplicationStyles } from '../../Themes';
+import {
+  Metrics,
+  ApplicationStyles,
+  Colors,
+  Fonts,
+} from '../../Themes';
 
 export default EStyleSheet.create({
   ...ApplicationStyles.screen,
@@ -14,5 +19,16 @@ export default EStyleSheet.create({
   },
   centered: {
     alignItems: 'center',
+  },
+  logoutButton: {
+    backgroundColor: Colors.bloodOrange,
+    alignSelf: 'center',
+    marginVertical: Metrics.marginVertical,
+  },
+  logoutText: {
+    color: Colors.eggplant,
+    textTransform: 'uppercase',
+    fontFamily: Fonts.type.bold,
+    paddingHorizontal: Metrics.doubleBaseMargin,
   },
 });

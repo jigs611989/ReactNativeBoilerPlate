@@ -20,7 +20,6 @@ const metrics = {
   screenWidth: width < height ? width : height,
   screenHeight: width < height ? height : width,
   navBarHeight: (Platform.OS === 'ios') ? '64rem' : '54rem',
-  buttonRadius: '20rem',
   icons: {
     tiny: '15rem',
     small: '20rem',
@@ -38,6 +37,8 @@ const metrics = {
   doubleWidth: wp('10%'),
   baseHeight: hp('4%'),
   doubleHeight: hp('10%'),
+  buttonHeight: '40rem',
+  buttonRadius: '20rem',
 };
 
 export default metrics;

@@ -6,6 +6,7 @@ import {
   Content,
   Text,
 } from 'native-base';
+import { NavigationActions } from 'react-navigation';
 import { connect } from 'react-redux';
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
@@ -17,7 +18,11 @@ import { Images } from '../Themes';
 class WelcomeScreen extends Component {
   goToLogin = () => {
     const { navigation } = this.props;
-    navigation.navigate('Auth');
+    const navigateAction = NavigationActions.navigate({
+      routeName: 'Auth',
+      index: 0,
+    });
+    navigation.dispatch(navigateAction);
   }
 
   render() {

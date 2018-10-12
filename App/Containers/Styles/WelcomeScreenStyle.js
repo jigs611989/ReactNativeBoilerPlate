@@ -1,5 +1,10 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
-import { ApplicationStyles, Colors, Fonts, Metrics } from '../../Themes';
+import {
+  ApplicationStyles,
+  Colors,
+  Fonts,
+  Metrics,
+} from '../../Themes';
 
 export default EStyleSheet.create({
   ...ApplicationStyles.screen,
@@ -17,10 +22,10 @@ export default EStyleSheet.create({
   getStartedButton: {
     alignSelf: 'center',
     backgroundColor: Colors.bloodOrange,
-    borderRadius: 20,
   },
   getStartedText: {
     color: Colors.eggplant,
     textTransform: 'uppercase',
+    fontFamily: Fonts.type.bold,
   },
 });

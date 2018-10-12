@@ -1,6 +1,6 @@
 import { createStackNavigator, createSwitchNavigator } from 'react-navigation';
-import LoginScreen from '../Containers/LoginScreen';
 import WelcomeScreen from '../Containers/WelcomeScreen';
+import LoginScreen from '../Containers/LoginScreen';
 import LaunchScreen from '../Containers/LaunchScreen';
 
 import styles from './Styles/NavigationStyles';
@@ -24,9 +24,6 @@ const LoginStack = createStackNavigator({
   // Default config for all screens
   headerMode: 'none',
   initialRouteName: 'LoginScreen',
-  navigationOptions: {
-    headerStyle: styles.header,
-  },
 });
 
 const MainStack = createStackNavigator({
@@ -36,9 +33,6 @@ const MainStack = createStackNavigator({
   // Default config for all screens
   headerMode: 'none',
   initialRouteName: 'LaunchScreen',
-  navigationOptions: {
-    headerStyle: styles.header,
-  },
 });
 
 const PrimaryNav = createSwitchNavigator({
