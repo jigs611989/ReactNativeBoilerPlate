@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native'
-import { ApplicationStyles } from '../../Themes/'
+import EStyleSheet from 'react-native-extended-stylesheet';
+import { ApplicationStyles } from '../../Themes';
 
-export default StyleSheet.create({
-  ...ApplicationStyles.screen
-})
+export default EStyleSheet.create({
+  ...ApplicationStyles.screen,
+});

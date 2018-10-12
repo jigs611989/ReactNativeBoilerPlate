@@ -1,7 +1,7 @@
-import { StyleSheet } from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Metrics, ApplicationStyles } from '../../Themes';
 
-export default StyleSheet.create({
+export default EStyleSheet.create({
   ...ApplicationStyles.screen,
   container: {
     paddingBottom: Metrics.baseMargin,

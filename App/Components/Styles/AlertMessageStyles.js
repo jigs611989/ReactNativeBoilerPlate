@@ -1,7 +1,7 @@
-import { StyleSheet } from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Colors, Metrics, Fonts } from '../../Themes';
 
-export default StyleSheet.create({
+export default EStyleSheet.create({
   container: {
     justifyContent: 'center',
     marginVertical: Metrics.section,

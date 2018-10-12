@@ -42,7 +42,6 @@ const MainStack = createStackNavigator({
 });
 
 const PrimaryNav = createSwitchNavigator({
-  LoginScreen: { screen: LoginScreen },
   Welcome: WelcomeStack,
   Auth: LoginStack,
   MainStack,

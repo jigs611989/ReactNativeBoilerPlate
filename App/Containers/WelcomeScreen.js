@@ -1,32 +1,54 @@
-import React, { Component } from 'react'
-import { Container, Content } from 'native-base'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import { ImageBackground } from 'react-native';
+import {
+  Button,
+  Container,
+  Content,
+  Text,
+} from 'native-base';
+import { connect } from 'react-redux';
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
 
 // Styles
-import styles from './Styles/WelcomeScreenStyle'
+import styles from './Styles/WelcomeScreenStyle';
+import { Images } from '../Themes';
 
 class WelcomeScreen extends Component {
-  render () {
+  goToLogin = () => {
+    const { navigation } = this.props;
+    navigation.navigate('Auth');
+  }
+
+  render() {
     return (
-      <Container style={styles.container}>
-        <Content>
-          <Text>Welcome</Text>
-        </Content>
+      <Container style={styles.mainContainer}>
+        <ImageBackground
+          source={Images.background}
+          imageStyle={{ height: '100%', width: '100%' }}
+          style={styles.backgroundImage}
+        >
+          <Content contentContainerStyle={styles.content}>
+            <Text style={styles.welcomeText}>
+              Welcome
+            </Text>
+            <Button
+              style={styles.getStartedButton}
+              onPress={this.goToLogin}
+            >
+              <Text style={styles.getStartedText}>Get Started</Text>
+            </Button>
+          </Content>
+        </ImageBackground>
       </Container>
-    )
+    );
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-  }
-}
+const mapStateToProps = state => ({
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-  }
-}
+const mapDispatchToProps = dispatch => ({
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(WelcomeScreen)
+export default connect(mapStateToProps, mapDispatchToProps)(WelcomeScreen);

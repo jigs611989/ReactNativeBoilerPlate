@@ -4,6 +4,11 @@
       "es6": true
     },
     "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
     "extends": "airbnb",
     "rules": {
       "class-methods-use-this": 0,

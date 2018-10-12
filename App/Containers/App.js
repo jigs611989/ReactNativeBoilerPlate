@@ -1,10 +1,15 @@
 import '../Config';
 import React from 'react';
+import { Dimensions } from 'react-native';
 import { Provider } from 'react-redux';
+import EStyleSheet from 'react-native-extended-stylesheet';
 import DebugConfig from '../Config/DebugConfig';
 import RootContainer from './RootContainer';
 import createStore from '../Redux';
 
+const entireScreenWidth = Dimensions.get('window').width;
+// Use the width of the design you have been provided in place of 380
+EStyleSheet.build({ $rem: entireScreenWidth / 380 });
 // create our store
 const store = createStore();
 

@@ -1,7 +1,7 @@
-import { StyleSheet } from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Fonts, Colors, Metrics } from '../../Themes';
 
-export default StyleSheet.create({
+export default EStyleSheet.create({
   button: {
     height: 45,
     borderRadius: 5,
